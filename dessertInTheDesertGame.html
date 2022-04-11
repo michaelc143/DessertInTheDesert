@@ -19,19 +19,22 @@
       color:blanchedalmond;
     }
 </style><script>
-/* JavaScript Section Code goes here */
+
 var score=0;
+//Dessert Tile
 function handleDessertClick() {
-score=score+1;
-document.getElementById('output').innerHTML = "Score: " + score;
-randomizeButtonPositions()
+  score=score+1;
+  document.getElementById('output').innerHTML = "Score: " + score;
+  randomizeButtonPositions()
 }
 
+//Desert Tile
 function handleDesertClick() {
-score=score-1;
-document.getElementById('output').innerHTML = "Score: " + score;
-randomizeButtonPositions()
+  score=score-1;
+  document.getElementById('output').innerHTML = "Score: " + score;
+  randomizeButtonPositions()
 }
+  
 function randomizeButtonPositions() {
   var buttons = document.querySelectorAll("button");
   buttons.forEach( (b) => {
@@ -39,6 +42,7 @@ function randomizeButtonPositions() {
     b.style.top = (Math.random()*80+10)+"%";
   } );
 }
+
 </script></head>
   <body onload="randomizeButtonPositions()">
     <p id="output">Score: 0</p>
